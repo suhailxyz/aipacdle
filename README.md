@@ -1,6 +1,6 @@
 # AIPAC.cash
 
-A daily guessing game that makes the scale of AIPAC-aligned PAC political funding more visible. Users guess how much money a U.S. politician received from AIPAC-aligned PACs, then see a high-impact numerical reveal with contextualization and cited sources.
+A daily guessing game that makes the scale of AIPAC-aligned PAC political funding more visible.
 
 ## Tech Stack
 
