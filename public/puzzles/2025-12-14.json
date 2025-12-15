@@ -1,0 +1,15 @@
+{
+  "date": "2025-12-14",
+  "name": "Hakeem Jeffries",
+  "subtitle": "U.S. Representative • NY-08",
+  "image": "/images/2025-12-14.jpg",
+  "amount": 1635000,
+  "party": "D",
+  "note": "TrackAIPAC poster figure is shown as $1,635,000+",
+  "source": "https://www.trackaipac.com/s/NY-08-Hakeem-Jeffries-Poster-ENG.pdf",
+  "sourceLabel": "TrackAIPAC (data via OpenSecrets/FEC)",
+  "range": {
+    "min": 0,
+    "max": 3000000
+  }
+}
