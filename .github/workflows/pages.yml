@@ -30,15 +30,22 @@ jobs:
       - name: Install dependencies
         run: npm ci
       
+      - name: Set BASE_URL
+        id: base_url
+        run: |
+          if [ -n "${{ secrets.CUSTOM_DOMAIN_BASE_URL }}" ]; then
+            echo "base_url=${{ secrets.CUSTOM_DOMAIN_BASE_URL }}" >> $GITHUB_OUTPUT
+          else
+            echo "base_url=/${{ github.event.repository.name }}/" >> $GITHUB_OUTPUT
+          fi
+      
       - name: Build
         run: npm run build
         env:
-          BASE_URL: /${{ github.event.repository.name }}/
+          BASE_URL: ${{ steps.base_url.outputs.base_url }}
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
-        with:
-          enablement: true
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
