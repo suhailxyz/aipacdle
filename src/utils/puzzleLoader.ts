@@ -7,7 +7,7 @@ export interface PuzzleData {
   party?: 'D' | 'R';
   note?: string;
   source: string;
-  sourceLabel: string;
+  sourceLabel?: string;
   range?: {
     min: number;
     max: number;

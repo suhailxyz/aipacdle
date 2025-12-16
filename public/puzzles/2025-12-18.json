@@ -1,0 +1,16 @@
+{
+  "date": "2025-12-18",
+  "name": "Steve Daines",
+  "subtitle": "U.S. Senator • MT",
+  "image": "/images/2025-12-18.jpg",
+  "amount": 369841,
+  "party": "R",
+  "note": "AIPAC, RJC",
+  "source": "https://www.trackaipac.com/congress",
+  "sourceLabel": "",
+  "range": {
+    "min": 0,
+    "max": 1500000
+  }
+}
+
