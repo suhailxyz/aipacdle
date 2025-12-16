@@ -3,6 +3,7 @@ export interface PuzzleData {
   name: string;
   subtitle: string;
   image: string;
+  caption?: string;
   amount: number;
   party?: 'D' | 'R';
   note?: string;

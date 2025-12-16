@@ -227,13 +227,17 @@ export function GuessScreen({ puzzle, onGuess, onRevealEarly, guesses }: GuessSc
 
       <div className="subject-guesses-container">
         <div className="subject-section">
+          <h1 className="subject-name">{puzzle.name}</h1>
+          <div className="subject-name-divider"></div>
+          <p className="subject-subtitle">{puzzle.subtitle}</p>
           <img 
             src={imageUrl} 
             alt={puzzle.name}
             className={`subject-image ${puzzle.party ? `subject-image-${puzzle.party.toLowerCase()}` : 'subject-image-default'}`}
           />
-          <h1 className="subject-name">{puzzle.name}</h1>
-          <p className="subject-subtitle">{puzzle.subtitle}</p>
+          {puzzle.caption && (
+            <p className="subject-image-caption">{puzzle.caption}</p>
+          )}
         </div>
 
         {guesses.length > 0 && (

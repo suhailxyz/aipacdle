@@ -129,13 +129,17 @@ export function RevealScreen({ puzzle, guesses, onShare, onResources, isForfeit 
       )}
       
       <div className="reveal-subject-section">
+        <h1 className="reveal-subject-name">{puzzle.name}</h1>
+        <div className="reveal-subject-name-divider"></div>
+        <p className="reveal-subject-subtitle">{puzzle.subtitle}</p>
         <img 
           src={imageUrl} 
           alt={puzzle.name}
           className={`reveal-subject-image ${puzzle.party ? `reveal-subject-image-${puzzle.party.toLowerCase()}` : 'reveal-subject-image-default'}`}
         />
-        <h1 className="reveal-subject-name">{puzzle.name}</h1>
-        <p className="reveal-subject-subtitle">{puzzle.subtitle}</p>
+        {puzzle.caption && (
+          <p className="reveal-subject-image-caption">{puzzle.caption}</p>
+        )}
       </div>
 
       <div className="reveal-amount-section">
