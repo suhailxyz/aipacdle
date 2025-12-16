@@ -238,17 +238,12 @@ export function RevealScreen({ puzzle, guesses, onShare, onResources, isForfeit 
           </div>
           {onResources && (
             <button 
-              className="btn btn-flag palestine-flag-button"
+              className="btn btn-flag"
               onClick={onResources}
               aria-label="Resources"
               title="Resources"
             >
-              <div className="palestine-flag palestine-flag-button-size">
-                <div className="flag-stripe flag-black"></div>
-                <div className="flag-stripe flag-white"></div>
-                <div className="flag-stripe flag-green"></div>
-                <div className="flag-triangle flag-triangle-button"></div>
-              </div>
+              <span style={{ fontSize: '2rem', lineHeight: 1 }}>🇵🇸</span>
             </button>
           )}
         </div>

@@ -5,7 +5,7 @@ import { GuessScreen } from './components/GuessScreen';
 import { RevealScreen } from './components/RevealScreen';
 import { AboutScreen } from './components/AboutScreen';
 import { ResourcesScreen } from './components/ResourcesScreen';
-import { calculatePercentageError, RATING_CONFIG, getRatingGrade } from './utils/formatters';
+import { calculatePercentageError, RATING_CONFIG, getRatingGrade, getStarRating } from './utils/formatters';
 import { ArrowLeft, Sun, Moon, HelpCircle } from 'lucide-react';
 
 type AppState = 'loading' | 'error' | 'guess' | 'reveal' | 'about' | 'resources';
@@ -94,8 +94,10 @@ function App() {
     const lastGuess = guesses[guesses.length - 1];
     const percentageError = calculatePercentageError(lastGuess, actual);
     const rating = getRatingGrade(guesses, percentageError, isForfeit);
+    const starCount = getStarRating(rating);
+    const stars = '★'.repeat(starCount);
 
-    const shareText = `I just got a ${rating} on today's AIPAC.cash`;
+    const shareText = `💰🤝🏛️ Guess how much AIPAC-aligned money went to ${puzzle.name}?\nPlay today's https://aipac.cash\nMy Grade: ${rating} ${stars}`;
 
     // Try modern Clipboard API first
     if (navigator.clipboard && navigator.clipboard.writeText) {
