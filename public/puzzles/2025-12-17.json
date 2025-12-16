@@ -2,7 +2,7 @@
   "date": "2025-12-17",
   "name": "Chuck Grassley",
   "subtitle": "U.S. Senator • IA",
-  "image": "/images/2025-12-17.jpg",
+  "image": "/images/2025-12-17.webp",
   "amount": 502541,
   "party": "R",
   "note": "AIPAC",
@@ -10,7 +10,7 @@
   "sourceLabel": "",
   "range": {
     "min": 0,
-    "max": 2000000
+    "max": 1500000
   }
 }
 
